@@ -25,10 +25,6 @@ body {
   border-bottom-right-radius: 5em;
 }
 
-.hidden {
-  visibility: hidden;
-}
-
 .date {
   display: flex;
   justify-content: space-between;
@@ -98,4 +94,12 @@ body {
 }
 .answer__number {
   color: hsl(259, 100%, 65%);
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+.error {
+  color: hsl(0, 100%, 67%);
 }/*# sourceMappingURL=App.css.map */

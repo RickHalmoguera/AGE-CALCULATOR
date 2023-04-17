@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,700;1,400;1,800&display=swap');
 $purple: hsl(259, 100%, 65%);
-$lightred:hsl(0, 100%, 67%);
+$lightRed:hsl(0, 100%, 67%);
 $lightGrey: hsl(0, 0%, 86%);
 $smokeyGrey: hsl(0, 1%, 44%);
 $black :hsl(0, 0%, 8%);
@@ -30,8 +30,6 @@ body{
     padding: 2em;
     border-bottom-right-radius: 5em;
 }
-
-.hidden { visibility: hidden;}
 
 .date{
     display: flex;
@@ -106,4 +104,7 @@ body{
     }
 }
 
+.hidden { visibility: hidden}
+
+.error{ color:$lightRed}
 
