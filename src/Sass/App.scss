@@ -106,5 +106,10 @@ body{
 
 .hidden { visibility: hidden}
 
-.error{ color:$lightRed}
+.error{ 
+    color:$lightRed;
+}
+.small{
+    font-size: .6rem;
+}
 

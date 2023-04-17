@@ -22,12 +22,9 @@ function App() {
   const yearLabel = useRef()
 
   const getDate = (ref) =>{
-    dayErrorRef.current.classList.add('hidden')
-    dayLabel.current.classList.remove('error')
-    monthErrorRef.current.classList.add('hidden')
-    monthLabel.current.classList.remove('error')
-    yearErrorRef.current.classList.add('hidden')
-    yearLabel.current.classList.remove('error')
+   
+    
+    
      
     if (ref.current.name === "day"){
       if(ref.current.value < 0 || ref.current.value >=31){
@@ -35,6 +32,8 @@ function App() {
         dayLabel.current.classList.add('error')
       }else{
         setDay(dayRef.current.value)
+        dayErrorRef.current.classList.add('hidden')
+        dayLabel.current.classList.remove('error')
       }
     }else if(ref.current.name === "month"){
       if(ref.current.value< 0 || ref.current.value >=12){
@@ -42,6 +41,8 @@ function App() {
         monthLabel.current.classList.add('error')
       }else{
         setMonth(monthRef.current.value)
+        monthErrorRef.current.classList.add('hidden')
+        monthLabel.current.classList.remove('error')
       }
     }else if(ref.current.name === "year"){
       const year = new Date().getFullYear()
@@ -50,6 +51,8 @@ function App() {
         yearLabel.current.classList.add('error')
       }else{
         setYear(yearRef.current.value)
+        yearErrorRef.current.classList.add('hidden')
+        yearLabel.current.classList.remove('error')
       }
     }
 
@@ -72,17 +75,17 @@ function App() {
       <label htmlFor="day">
       <p className="date__tag" ref={dayLabel}>day</p>
         <input className="date__input" onChange={()=>getDate(dayRef)} type="number" name="day" ref={dayRef} />
-        <span ref={dayErrorRef} className="hidden">must be a valid day</span>
+        <p ref={dayErrorRef} className="small error hidden">must be a valid day</p>
       </label>
       <label htmlFor="month">
         <p className="date__tag" ref={monthLabel}>month</p> 
           <input className="date__input" onChange={()=>getDate(monthRef)} type="number" name="month" ref={monthRef} />
-          <span ref={monthErrorRef} className="hidden">must be a valid month</span>
+          <p ref={monthErrorRef} className="small error hidden">must be a valid month</p>
         </label>
       <label htmlFor="year">
         <p className="date__tag" ref={yearLabel}>year</p>
           <input className="date__input" onChange={()=>getDate(yearRef)}  type="number" name="year"  ref={yearRef}/>
-          <span ref={yearErrorRef} className="hidden">must be in the past</span>
+          <p ref={yearErrorRef} className="small error hidden">must be in the past</p>
         </label>
     </div>
       <div className="divider">
