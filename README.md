@@ -56,7 +56,7 @@ Use this section to recap over some of your major learnings while working throug
 
 To see how you can add code snippets, see below:
 
-
+```js
 const getAge = ()=>{
     const today = new Date()
     const userDate = new Date(`${year}-${month}-${day}`)
